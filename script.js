@@ -1,4 +1,11 @@
-const greeting = "  Wel0come to the future  ";
-const array = greeting.trim().split(" ");
-const result = array.slice(1, array.length - 1).join(" "); 
-console.log(result);
+function slugify(title) {
+    
+    let arr = title.split(" ");
+    return(arr.join("-").tolowerCase); 
+
+}
+
+console.log(slugify("Arrays for beginners")); // "arrays-for-beginners"
+console.log(slugify("English for developer")); // "english-for-developer"
+console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
+console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); // "how-to-become-a-junior-developer-in-two-weeks"
