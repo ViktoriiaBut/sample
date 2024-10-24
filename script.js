@@ -1,16 +1,35 @@
-function filterArray(numbers, value) {
- let array = [];
- for (let i = 0; i < numbers.length; i++) {
-    if (value < numbers[i]) {
-        array.push(numbers[i]);
-    }
- }
- return array;
+const feedback = {
+    good: 5,
+    netural: 10,
+    bad: 3,
 }
 
+  //let total = 0;
 
-console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
-console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
-console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
-console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
-console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+  //for (const key in feedback){
+    //total += feedback[key];
+  //}
+  //console.log(total); 
+
+  //const keys = Object.keys(feedback);
+  //let total = 0;
+  //for (const key of keys) {
+    
+    //total += feedback[key];
+  //}
+
+  //console.log(total);
+
+  const values = Object.values(feedback);
+  let total = 0;
+  for (const value of values) {
+    total += value;
+  }
+  console.log(total);
+
+  const apartment = {
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+  };
+  
