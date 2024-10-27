@@ -1,35 +1,21 @@
-const feedback = {
-    good: 5,
-    netural: 10,
-    bad: 3,
-}
+const stones = [
+{name: "Diamant", price:1100, quantity:4 },
+{name: "Smaragd", price:1500, quantity:3 },
+{name: "Cupfir", price:1000, quantity:2 },
 
-  //let total = 0;
+];
 
-  //for (const key in feedback){
-    //total += feedback[key];
-  //}
-  //console.log(total); 
+function calcTotalPrice(arr, name) {
+    let sum = 0;
 
-  //const keys = Object.keys(feedback);
-  //let total = 0;
-  //for (const key of keys) {
-    
-    //total += feedback[key];
-  //}
-
-  //console.log(total);
-
-  const values = Object.values(feedback);
-  let total = 0;
-  for (const value of values) {
-    total += value;
+    for(const stone of arr) {
+      if(stone.name === name) {
+        sum += stone.price * stone.quantity;
+      }
+    }
+    return sum;
   }
-  console.log(total);
+ 
 
-  const apartment = {
-    descr: "Spacious apartment in the city center",
-    rating: 4,
-    price: 2153,
-  };
-  
+
+console.log(calcTotalPrice(stones, "Cupfir"));
